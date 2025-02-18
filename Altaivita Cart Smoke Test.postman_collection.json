@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "a30fe6d6-6050-4343-adc1-62c4a996ba33",
+		"name": "Altaivita Cart Smoke Test",
+		"description": "Коллекция запросов для смоук-тестирования корзины на сайте Altaivita",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16977355"
+	},
+	"item": [
+		{
+			"name": "Обновление количества товара в корзине",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "itemID",
+							"value": "793037"
+						},
+						{
+							"key": "quantity",
+							"value": "5"
+						},
+						{
+							"key": "action",
+							"value": "update_quantity"
+						},
+						{
+							"key": "LANG_key",
+							"value": "ru"
+						},
+						{
+							"key": "S_wh",
+							"value": "1"
+						},
+						{
+							"key": "S_CID",
+							"value": "e3c4f3e75c750eddcc6596e95a38108f"
+						},
+						{
+							"key": "S_cur_code",
+							"value": "usd"
+						},
+						{
+							"key": "S_koef",
+							"value": "0.01352"
+						},
+						{
+							"key": "S_hint_code",
+							"value": "eur"
+						},
+						{
+							"key": "S_customerID",
+							"value": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://altaivita.ru/engine/cart/action_with_basket_on_cart_page.php",
+					"protocol": "https",
+					"host": [
+						"altaivita",
+						"ru"
+					],
+					"path": [
+						"engine",
+						"cart",
+						"action_with_basket_on_cart_page.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление товара в корзину",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product_id",
+							"value": "3900"
+						},
+						{
+							"key": "this_listId",
+							"value": "product_cart"
+						},
+						{
+							"key": "parent_product",
+							"value": "3900"
+						},
+						{
+							"key": "LANG_key",
+							"value": "ru"
+						},
+						{
+							"key": "S_wh",
+							"value": "1"
+						},
+						{
+							"key": "S_CID",
+							"value": "e3c4f3e75c750eddcc6596e95a38108f"
+						},
+						{
+							"key": "S_cur_code",
+							"value": "usd"
+						},
+						{
+							"key": "S_koef",
+							"value": "0.0135"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						},
+						{
+							"key": "S_hint_code",
+							"value": "eur"
+						},
+						{
+							"key": "S_customerID",
+							"value": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://altaivita.ru/engine/cart/add_products_to_cart_from_preview.php",
+					"protocol": "https",
+					"host": [
+						"altaivita",
+						"ru"
+					],
+					"path": [
+						"engine",
+						"cart",
+						"add_products_to_cart_from_preview.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара из корзины",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product_id",
+							"value": "3900"
+						},
+						{
+							"key": "LANG_key",
+							"value": "ru"
+						},
+						{
+							"key": "S_wh",
+							"value": "1"
+						},
+						{
+							"key": "S_CID",
+							"value": "e3c4f3e75c750eddcc6596e95a38108f"
+						},
+						{
+							"key": "S_cur_code",
+							"value": "usd"
+						},
+						{
+							"key": "S_koef",
+							"value": "0.01352"
+						},
+						{
+							"key": "S_hint_code",
+							"value": "eur"
+						},
+						{
+							"key": "S_customerID",
+							"value": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://altaivita.ru/engine/cart/delete_products_from_cart_preview.php",
+					"protocol": "https",
+					"host": [
+						"altaivita",
+						"ru"
+					],
+					"path": [
+						"engine",
+						"cart",
+						"delete_products_from_cart_preview.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
